@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2021 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ uses
   Winapi.Windows, Winapi.Messages,
   System.SysUtils, System.Variants, System.Classes, System.Actions,
   System.ImageList,
-  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Menus,
   Vcl.ActnList, Vcl.ImgList, Vcl.StdCtrls,
 
   Spring, Spring.Collections,
@@ -33,7 +33,7 @@ uses
 
   DDuce.Components.GridView,
 
-  Demo.Contact, Vcl.Menus;
+  Demo.Contact;
 
 type
   TfrmGridView = class(TForm)
@@ -53,6 +53,7 @@ type
     FObjectInspector : TzObjectInspector;
     FList            : IList<TContact>;
 
+    {$REGION 'event handlers'}
     procedure FGridViewDrawCell(
       Sender             : TObject;
       Cell               : TGridCell;
@@ -74,6 +75,7 @@ type
       Cell   : TGridCell;
       Canvas : TCanvas
     );
+    {$ENDREGION}
 
   public
     procedure AfterConstruction; override;
@@ -106,6 +108,7 @@ begin
     pnlLeft,
     FGridView
   );
+  FObjectInspector.AlignWithMargins := True;
   FList := TDemoFactories.CreateContactList(1000);
   R.From(FList[0]);
   for F in R do

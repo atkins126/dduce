@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2021 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -51,9 +51,10 @@ uses
 procedure TfrmReflect.AfterConstruction;
 begin
   inherited AfterConstruction;
-  FValueList        := TValueList.Create(Self);
-  FValueList.Parent := Self;
-  FValueList.Align  := alClient;
+  FValueList             := TValueList.Create(Self);
+  FValueList.Parent      := Self;
+  FValueList.Align       := alClient;
+  FValueList.BorderStyle := bsNone;
   FData.FromString(Reflect.Properties(Self).ToString);
   FValueList.Data   := FData;
 end;

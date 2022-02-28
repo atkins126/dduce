@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2021 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -20,6 +20,7 @@ interface
 
 uses
   System.Actions, System.UITypes, System.Classes, System.ImageList,
+  System.Win.TaskbarCore,
   Vcl.ActnList, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Controls, Vcl.ExtCtrls,
   Vcl.Buttons, Vcl.Forms, Vcl.ImgList, Vcl.Taskbar,
 
@@ -27,27 +28,32 @@ uses
 
   DSharp.Windows.ColumnDefinitions, DSharp.Windows.TreeViewPresenter,
 
-  Spring.Collections, System.Win.TaskbarCore;
+  Spring.Collections;
 
 type
   TfrmMainMenu = class(TForm)
+    {$REGION 'designer conrtrols'}
     aclMain           : TActionList;
+    actCenterMainForm : TAction;
     actClose          : TAction;
     actExecute        : TAction;
     actFocusFilter    : TAction;
+    btnExecute        : TButton;
     edtFilter         : TEdit;
+    imlMain           : TImageList;
     pnlTop            : TPanel;
     pnlVST            : TPanel;
     sbrMain           : TStatusBar;
-    imlMain           : TImageList;
-    btnExecute        : TButton;
-    actCenterMainForm : TAction;
     tbrMain           : TTaskbar;
+    {$ENDREGION}
 
+    {$REGION 'action handlers'}
     procedure actExecuteExecute(Sender: TObject);
     procedure actFocusFilterExecute(Sender: TObject);
     procedure actCenterMainFormExecute(Sender: TObject);
+    {$ENDREGION}
 
+    {$REGION 'event handlers'}
     procedure FVSTKeyPress(Sender: TObject; var Key: Char);
     procedure FVSTPaintBackground(
       Sender       : TBaseVirtualTree;
@@ -55,7 +61,6 @@ type
       R            : TRect;
       var Handled  : Boolean
     );
-
     procedure FTVPFilter(Item: TObject; var Accepted: Boolean);
     procedure FTVPDoubleClick(Sender: TObject);
     function FTVPColumnDefinitionsCustomDrawColumn(
@@ -83,6 +88,7 @@ type
     procedure edtFilterEnter(Sender: TObject);
     procedure edtFilterExit(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    {$ENDREGION}
 
   private
     FVKPressed : Boolean;
@@ -108,6 +114,7 @@ uses
   Vcl.Graphics,
 
   DDuce.Factories.TreeViewPresenter, DDuce.Factories.VirtualTrees,
+
   Demo.Factories, Demo.Manager;
 
 type
@@ -196,7 +203,13 @@ end;
 
 procedure TfrmMainMenu.actExecuteExecute(Sender: TObject);
 begin
+ // for some reason VST is causing the UpdateActions method on the created
+ // forms not to be called.
+ // The workaround for now is to make this form invisible when a demo form
+ // is created
+  Visible := False;
   DemoManager.Execute(FTVP.SelectedItem);
+  Visible := True;
 end;
 
 procedure TfrmMainMenu.actFocusFilterExecute(Sender: TObject);

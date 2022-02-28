@@ -16,14 +16,13 @@ object frmDynamicRecords: TfrmDynamicRecords
   TextHeight = 13
   object splHorizontal: TSplitter
     Left = 0
-    Top = 278
+    Top = 274
     Width = 784
-    Height = 2
+    Height = 6
     Cursor = crVSplit
     Align = alBottom
-    Color = clScrollBar
-    ParentColor = False
-    ExplicitTop = 274
+    ResizeStyle = rsLine
+    ExplicitTop = 278
   end
   object pnlBottom: TGridPanel
     Left = 0
@@ -199,7 +198,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           Left = 3
           Top = 79
           Width = 484
-          Height = 69
+          Height = 70
           Align = alClient
           Caption = 'AsDelimitedText'
           TabOrder = 1
@@ -256,7 +255,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             Left = 180
             Top = 18
             Width = 299
-            Height = 49
+            Height = 50
             Margins.Bottom = 0
             Align = alRight
             Anchors = [akLeft, akTop, akRight, akBottom]
@@ -280,9 +279,9 @@ object frmDynamicRecords: TfrmDynamicRecords
         object grpToStrings: TGroupBox
           AlignWithMargins = True
           Left = 3
-          Top = 154
+          Top = 155
           Width = 484
-          Height = 69
+          Height = 70
           Align = alClient
           Caption = 'ToStrings'
           TabOrder = 2
@@ -291,7 +290,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             Left = 5
             Top = 18
             Width = 474
-            Height = 49
+            Height = 50
             Margins.Bottom = 0
             Align = alClient
             BevelInner = bvNone
@@ -314,15 +313,15 @@ object frmDynamicRecords: TfrmDynamicRecords
         object grpToString: TGroupBox
           AlignWithMargins = True
           Left = 3
-          Top = 229
+          Top = 231
           Width = 484
-          Height = 72
+          Height = 70
           Align = alClient
           Caption = 'ToString'
           TabOrder = 3
           DesignSize = (
             484
-            72)
+            70)
           object chkAlignValues: TCheckBox
             Left = 11
             Top = 24
@@ -339,7 +338,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             Left = 96
             Top = 18
             Width = 383
-            Height = 52
+            Height = 50
             Margins.Bottom = 0
             Anchors = [akLeft, akTop, akRight, akBottom]
             BevelInner = bvNone
@@ -366,18 +365,18 @@ object frmDynamicRecords: TfrmDynamicRecords
     Left = 0
     Top = 0
     Width = 784
-    Height = 278
+    Height = 274
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
       784
-      278)
+      274)
     object pgcMain: TPageControl
       Left = 63
       Top = 0
       Width = 721
-      Height = 266
+      Height = 262
       ActivePage = tsContactObject
       Anchors = [akLeft, akTop, akRight, akBottom]
       TabOrder = 0
@@ -387,7 +386,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           Left = 0
           Top = 0
           Width = 713
-          Height = 238
+          Height = 234
           Align = alClient
           AutoSize = False
           Color = clInfoBk
@@ -414,7 +413,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           Left = 0
           Top = 0
           Width = 713
-          Height = 238
+          Height = 234
           Align = alClient
           DataSource = dscTest
           Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -433,7 +432,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           Left = 0
           Top = 0
           Width = 713
-          Height = 238
+          Height = 234
           Align = alClient
           AutoSize = False
           Color = clInfoBk
@@ -459,7 +458,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           Left = 0
           Top = 0
           Width = 713
-          Height = 238
+          Height = 234
           Align = alClient
           AutoSize = False
           Color = clInfoBk
@@ -486,7 +485,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           Left = 0
           Top = 0
           Width = 713
-          Height = 238
+          Height = 234
           Align = alClient
           AutoSize = False
           Color = clInfoBk
@@ -512,7 +511,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           Left = 0
           Top = 0
           Width = 713
-          Height = 238
+          Height = 234
           Align = alClient
           BevelOuter = bvNone
           Color = clWhite
@@ -731,7 +730,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           TabOrder = 0
           DesignSize = (
             713
-            238)
+            234)
           object lbl00: TLabel
             Left = 28
             Top = 9
@@ -745,7 +744,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             Left = 63
             Top = 3
             Width = 137
-            Height = 25
+            Height = 28
             Align = alClient
             Alignment = taCenter
             AutoSize = False
@@ -767,8 +766,8 @@ object frmDynamicRecords: TfrmDynamicRecords
             AlignWithMargins = True
             Left = 206
             Top = 3
-            Width = 137
-            Height = 25
+            Width = 138
+            Height = 28
             Align = alClient
             Alignment = taCenter
             AutoSize = False
@@ -788,10 +787,10 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object lbl03: TLabel
             AlignWithMargins = True
-            Left = 349
+            Left = 350
             Top = 3
             Width = 137
-            Height = 25
+            Height = 28
             Align = alClient
             Alignment = taCenter
             AutoSize = False
@@ -811,10 +810,10 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object lbl04: TLabel
             AlignWithMargins = True
-            Left = 492
+            Left = 493
             Top = 3
             Width = 137
-            Height = 25
+            Height = 28
             Align = alClient
             Alignment = taCenter
             AutoSize = False
@@ -923,7 +922,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             AlignWithMargins = True
             Left = 206
             Top = 64
-            Width = 137
+            Width = 138
             Height = 24
             Action = actFRecord2Clear
             Align = alClient
@@ -937,7 +936,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnFDynamicRecord1Clear1: TButton
             AlignWithMargins = True
-            Left = 349
+            Left = 350
             Top = 94
             Width = 137
             Height = 24
@@ -953,7 +952,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnFDynamicRecord2Clear: TButton
             AlignWithMargins = True
-            Left = 492
+            Left = 493
             Top = 124
             Width = 137
             Height = 23
@@ -971,7 +970,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             AlignWithMargins = True
             Left = 206
             Top = 34
-            Width = 137
+            Width = 138
             Height = 24
             Action = actAssignFRecord2ToFRecord1
             Align = alClient
@@ -979,7 +978,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFDynamicRecord1ToFRecord1: TButton
             AlignWithMargins = True
-            Left = 349
+            Left = 350
             Top = 34
             Width = 137
             Height = 24
@@ -989,7 +988,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFDynamicRecord2ToFRecord1: TButton
             AlignWithMargins = True
-            Left = 492
+            Left = 493
             Top = 34
             Width = 137
             Height = 24
@@ -1009,7 +1008,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFDynamicRecord1ToFRecord2: TButton
             AlignWithMargins = True
-            Left = 349
+            Left = 350
             Top = 64
             Width = 137
             Height = 24
@@ -1019,7 +1018,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFDynamicRecord2ToFRecord2: TButton
             AlignWithMargins = True
-            Left = 492
+            Left = 493
             Top = 64
             Width = 137
             Height = 24
@@ -1041,7 +1040,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             AlignWithMargins = True
             Left = 206
             Top = 94
-            Width = 137
+            Width = 138
             Height = 24
             Action = actAssignFRecord2ToFDynamicRecord1
             Align = alClient
@@ -1049,7 +1048,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFDynamicRecord2ToFDynamicRecord1: TButton
             AlignWithMargins = True
-            Left = 492
+            Left = 493
             Top = 94
             Width = 137
             Height = 24
@@ -1071,7 +1070,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             AlignWithMargins = True
             Left = 206
             Top = 124
-            Width = 137
+            Width = 138
             Height = 23
             Action = actAssignFRecord2ToFDynamicRecord2
             Align = alClient
@@ -1079,7 +1078,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFDynamicRecord1ToFDynamicRecord2: TButton
             AlignWithMargins = True
-            Left = 349
+            Left = 350
             Top = 124
             Width = 137
             Height = 23
@@ -1089,7 +1088,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFieldValueToFRecord1: TButton
             AlignWithMargins = True
-            Left = 635
+            Left = 636
             Top = 34
             Width = 74
             Height = 24
@@ -1099,7 +1098,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFieldValueToFRecord2: TButton
             AlignWithMargins = True
-            Left = 635
+            Left = 636
             Top = 64
             Width = 74
             Height = 24
@@ -1109,7 +1108,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFieldValueToDynamicRecord1: TButton
             AlignWithMargins = True
-            Left = 635
+            Left = 636
             Top = 94
             Width = 74
             Height = 24
@@ -1119,7 +1118,7 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object btnAssignFieldValueToDynamicRecord2: TButton
             AlignWithMargins = True
-            Left = 635
+            Left = 636
             Top = 124
             Width = 74
             Height = 23
@@ -1132,7 +1131,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             Left = 63
             Top = 153
             Width = 137
-            Height = 82
+            Height = 81
             Align = alClient
             AutoSize = False
             Color = clCream
@@ -1153,8 +1152,8 @@ object frmDynamicRecords: TfrmDynamicRecords
             AlignWithMargins = True
             Left = 206
             Top = 153
-            Width = 137
-            Height = 82
+            Width = 138
+            Height = 81
             Align = alClient
             AutoSize = False
             Color = clCream
@@ -1173,10 +1172,10 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object lblFDynamicRecord1: TLabel
             AlignWithMargins = True
-            Left = 349
+            Left = 350
             Top = 153
             Width = 137
-            Height = 82
+            Height = 81
             Align = alClient
             AutoSize = False
             Color = clCream
@@ -1195,10 +1194,10 @@ object frmDynamicRecords: TfrmDynamicRecords
           end
           object lblFDynamicRecord2: TLabel
             AlignWithMargins = True
-            Left = 492
+            Left = 493
             Top = 153
             Width = 137
-            Height = 82
+            Height = 81
             Align = alClient
             AutoSize = False
             Color = clCream
@@ -1216,19 +1215,19 @@ object frmDynamicRecords: TfrmDynamicRecords
             ExplicitHeight = 23
           end
           object pnlField: TPanel
-            Left = 632
+            Left = 633
             Top = 150
             Width = 80
-            Height = 88
+            Height = 84
             Align = alClient
             BevelOuter = bvNone
             TabOrder = 20
             DesignSize = (
               80
-              88)
+              84)
             object edtFieldName: TLabeledEdit
               Left = 3
-              Top = 19
+              Top = 18
               Width = 68
               Height = 21
               Anchors = [akLeft, akRight]
@@ -1240,7 +1239,7 @@ object frmDynamicRecords: TfrmDynamicRecords
             end
             object edtValue: TLabeledEdit
               Left = 3
-              Top = 60
+              Top = 57
               Width = 68
               Height = 21
               Anchors = [akLeft, akRight]

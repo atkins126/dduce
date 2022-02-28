@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2021 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -73,7 +73,7 @@ type
 
   public
     procedure AfterConstruction; override;
-    procedure BeforeDestruction; override;
+    destructor Destroy; override;
 
     function ReadString(
       const ASection : string;
@@ -88,7 +88,7 @@ type
       const ASection : string;
       const AIdent   : string;
       const ADefault : Integer = 0
-    ) : Integer;
+    ): Integer;
     procedure WriteInteger(
       const ASection : string;
       const AIdent   : string;
@@ -98,16 +98,17 @@ type
       const ASection : string;
       const AIdent   : string;
       const ADefault : Boolean = False
-    ) : Boolean;
+    ): Boolean;
     procedure WriteBool(
       const ASection : string;
       const AIdent   : string;
       const AValue   : Boolean
     );
+
   end;
 
 var
-  FSettings: ISettings;
+  FSettings : ISettings;
 
 {$REGION 'interfaced routines'}
 function Settings: ISettings;
@@ -129,10 +130,10 @@ begin
   FIniFile := TIniFile.Create(S);
 end;
 
-procedure TSettings.BeforeDestruction;
+destructor TSettings.Destroy;
 begin
   FIniFile.Free;
-  inherited BeforeDestruction;
+  inherited Destroy;
 end;
 {$ENDREGION}
 

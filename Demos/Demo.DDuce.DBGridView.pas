@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2021 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -28,19 +28,23 @@ uses
   Data.DB,
 
   DDuce.Components.GridView, DDuce.Components.DBGridView,
-
   DDuce.Components.LogTree;
 
 type
   TfrmDBGridView = class(TForm)
     {$REGION 'designer controls'}
     aclMain                  : TActionList;
+    actAutoSizeColumns       : TAction;
+    actClearLog              : TAction;
+    actInspectComponent      : TAction;
     btnAutoSizeDisplayWidths : TButton;
-    btnInspectComponent      : TButton;
     btnClearLog              : TButton;
+    btnInspectComponent      : TButton;
     chkActive                : TCheckBox;
+    chkConnectEvents         : TCheckBox;
     chkMultiselect           : TCheckBox;
     dscMain                  : TDataSource;
+    imlMain                  : TImageList;
     lbxDataSourceEvents      : TCheckListBox;
     lbxDBGridViewEvents      : TCheckListBox;
     pgcMain                  : TPageControl;
@@ -52,24 +56,23 @@ type
     tsDataSourceEvents       : TTabSheet;
     tsDBGridView             : TTabSheet;
     tsDBGridViewEvents       : TTabSheet;
-    imlMain                  : TImageList;
-    actInspectComponent      : TAction;
-    actAutoSizeColumns       : TAction;
-    actClearLog              : TAction;
-    chkConnectEvents         : TCheckBox;
     {$ENDREGION}
 
+    {$REGION 'action handlers'}
+    procedure actAutoSizeColumnsExecute(Sender: TObject);
+    procedure actClearLogExecute(Sender: TObject);
+    {$ENDREGION}
+
+    {$REGION 'event handlers'}
     procedure chkActiveClick(Sender: TObject);
+    procedure chkConnectEventsClick(Sender: TObject);
+    procedure chkMultiselectClick(Sender: TObject);
     procedure dscMainDataChange(Sender: TObject; Field: TField);
     procedure dscMainStateChange(Sender: TObject);
     procedure dscMainUpdateData(Sender: TObject);
     procedure grdDBGVDataActiveChanged(Sender: TObject);
     procedure grdDBGVDataChanged(Sender: TObject);
-    procedure chkMultiselectClick(Sender: TObject);
-    procedure chkConnectEventsClick(Sender: TObject);
-
-    procedure actAutoSizeColumnsExecute(Sender: TObject);
-    procedure actClearLogExecute(Sender: TObject);
+    {$ENDREGION}
 
   private
     FDBGV : TDBGridView;
@@ -261,10 +264,11 @@ begin
   CreateDBGridView;
 
   FVLT := TLogTree.Create(Self);
-  FVLT.Parent := pnlLog;
-  FVLT.Align := alClient;
-  FVLT.AlignWithMargins := True;
-  FVLT.HTMLSupport := True;
+  FVLT.Parent             := pnlLog;
+  FVLT.BorderStyle        := bsNone;
+  FVLT.Align              := alClient;
+  FVLT.AlignWithMargins   := True;
+  FVLT.HTMLSupport        := True;
   FVLT.AutoLogLevelColors := True;
   FVLT.Init;
   FVLT.Images := imlMain;
@@ -1069,7 +1073,7 @@ begin
   );
   with FDBGV do
   begin
-    AlignWithMargins  := True;
+    AlignWithMargins  := False;
     CursorKeys        := [gkArrows, gkTabs, gkReturn, gkMouse, gkMouseWheel];
     DoubleBuffered    := True;
     ParentFont        := False;
@@ -1082,6 +1086,7 @@ begin
     RowSelect         := True;
     Rows.AutoHeight   := True;
     Header.AutoHeight := True;
+    BorderStyle       := bsNone;
   end;
 end;
 

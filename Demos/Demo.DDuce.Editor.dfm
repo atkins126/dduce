@@ -12,15 +12,16 @@ object frmEditor: TfrmEditor
   Font.Style = []
   OldCreateOrder = False
   ShowHint = True
+  OnResize = FormResize
   PixelsPerInch = 96
   TextHeight = 13
   object splVertical: TSplitter
     Left = 377
     Top = 0
-    Width = 2
+    Width = 6
     Height = 549
-    Color = clScrollBar
-    ParentColor = False
+    ResizeStyle = rsLine
+    ExplicitLeft = 371
   end
   object sbrMain: TStatusBar
     Left = 0
@@ -37,11 +38,38 @@ object frmEditor: TfrmEditor
     Align = alLeft
     BevelOuter = bvNone
     TabOrder = 1
+    object splHorizontal: TSplitter
+      Left = 0
+      Top = 265
+      Width = 377
+      Height = 6
+      Cursor = crVSplit
+      Align = alTop
+      ResizeStyle = rsLine
+    end
+    object pnlLeftTop: TPanel
+      Left = 0
+      Top = 0
+      Width = 377
+      Height = 265
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 0
+    end
+    object pnlLeftBottom: TPanel
+      Left = 0
+      Top = 271
+      Width = 377
+      Height = 278
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 1
+    end
   end
   object pnlRight: TPanel
-    Left = 379
+    Left = 383
     Top = 0
-    Width = 625
+    Width = 621
     Height = 549
     Align = alClient
     BevelOuter = bvNone

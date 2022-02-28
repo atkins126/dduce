@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2021 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -23,10 +23,11 @@ procedure RegisterDemos;
 implementation
 
 uses
-  DDuce.Logger.Channels.WinIPC,
-  DDuce.Logger,
+  DDuce.Logger.Channels.WinIPC, DDuce.Logger,
 
-  Demo.DDuce.XMLTree,
+  //Demo.DDuce.XMLTree,
+  Demo.DDuce.JsonTree,
+  Demo.DDuce.IniTree,
   Demo.DDuce.PropertyInspector,
   Demo.DDuce.Reflect,
   Demo.DDuce.DynamicRecord,
@@ -40,27 +41,28 @@ uses
   Demo.DDuce.VTNode,
   Demo.DDuce.EditList,
   Demo.DDuce.Dialogs,
-
   Demo.Manager;
 
 {$REGION 'interfaced routines'}
 procedure RegisterDemos;
 begin
-  DemoManager.Register(TfrmLogger, 'Logger');
+  DemoManager.Register(TfrmEditor, 'Editor');
+
   //Exit;
+  DemoManager.Register(TfrmLogger, 'Logger');
   DemoManager.Register(TfrmGridView, 'GridView');
   DemoManager.Register(TfrmDBGridView, 'DBGridView');
   DemoManager.Register(TfrmValueListDemo, 'ValueList');
   DemoManager.Register(TfrmDynamicRecords, 'Dynamic record');
-  DemoManager.Register(TfrmEditor, 'Editor');
   DemoManager.Register(TfrmVirtualTrees, 'VirtualTrees factories');
   DemoManager.Register(TfrmVTNode, 'VTNode');
   DemoManager.Register(TfrmEditList, 'EditList');
   DemoManager.Register(TfrmDialogs, 'Dialogs');
-
-  //DemoManager.Register(TfrmReflect, 'Reflect');
-  //DemoManager.Register(TfrmInspector, 'Inspector');
-  //DemoManager.Register(TfrmPropertyInspector, 'Property Inspector');
+  DemoManager.Register(TfrmReflect, 'Reflect');
+  DemoManager.Register(TfrmJsonTree, 'JsonTree');
+  DemoManager.Register(TfrmIniTree, 'IniTree');
+//  DemoManager.Register(TfrmInspector, 'Inspector');
+//  DemoManager.Register(TfrmPropertyInspector, 'Property Inspector');
   // not working yet
   //DemoManager.Register(TfrmXMLTree, 'XMLTree');
 end;

@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2021 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -976,18 +976,9 @@ implementation
 uses
   System.TypInfo, System.Variants, System.Math, System.StrUtils,
   System.Generics.Collections,
-  WinApi.Windows;
+  WinApi.Windows,
 
-resourcestring
-  SFieldNotFound        = 'Record does not contain a field with name %s';
-  SValueCannotBeRead    = 'Value of %s could not be read';
-  SValueConversionError =
-    'Error while trying to convert value of (%s) with type (%s)';
-  SParamIsNotRecordOrInstanceType =
-    'AInstance is not a record or instance type!';
-  SPropertyNotFound = 'Property %s not found! (%s)';
-  SArgumentTypeNotSupported =
-    'The argument type of AssignTo is not supported';
+  DDuce.Resources;
 
 var
   FContext: TRttiContext;
@@ -996,8 +987,8 @@ var
 function WordCount(const AString: string; const AWordDelims: TSysCharSet)
   : Integer;
 var
-  N: Integer;
-  I: Integer;
+  N : Integer;
+  I : Integer;
 begin
   Result := 0;
   I := 1;
@@ -1042,8 +1033,8 @@ end;
 function ExtractWord(const AIndex: Integer; const AString: string;
   const AWordDelims: TSysCharSet): string;
 var
-  I: Integer;
-  N: Integer;
+  I : Integer;
+  N : Integer;
 begin
   N := 0;
   I := WordPosition(AIndex, AString, AWordDelims);
@@ -1819,7 +1810,7 @@ begin
                 end
                 else
                 begin
-                  raise Exception.Create('TryGetUnderlyingValue failed.');
+                  //raise Exception.Create('TryGetUnderlyingValue failed.');
                 end;
               end
               else

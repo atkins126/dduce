@@ -51,6 +51,7 @@ object frmXMLTree: TfrmXMLTree
       Top = 0
       Width = 6
       Height = 516
+      ResizeStyle = rsLine
     end
     object pnlXMLTree: TPanel
       Left = 0
@@ -75,6 +76,9 @@ object frmXMLTree: TfrmXMLTree
         Width = 432
         Height = 516
         Align = alClient
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        BorderStyle = bsNone
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11

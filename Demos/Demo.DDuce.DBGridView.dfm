@@ -17,15 +17,13 @@ object frmDBGridView: TfrmDBGridView
   TextHeight = 13
   object splMain: TSplitter
     Left = 0
-    Top = 341
+    Top = 337
     Width = 867
-    Height = 2
+    Height = 6
     Cursor = crVSplit
     Align = alBottom
-    Color = clScrollBar
-    ParentColor = False
-    ExplicitTop = 337
-    ExplicitWidth = 845
+    ResizeStyle = rsLine
+    ExplicitTop = 341
   end
   object pnlLog: TPanel
     Left = 0
@@ -41,8 +39,8 @@ object frmDBGridView: TfrmDBGridView
     Left = 0
     Top = 34
     Width = 867
-    Height = 307
-    ActivePage = tsDBGridView
+    Height = 303
+    ActivePage = tsDBGridViewEvents
     Align = alClient
     TabOrder = 2
     object tsDBGridView: TTabSheet
@@ -56,7 +54,7 @@ object frmDBGridView: TfrmDBGridView
         Left = 0
         Top = 0
         Width = 859
-        Height = 279
+        Height = 275
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
@@ -65,8 +63,11 @@ object frmDBGridView: TfrmDBGridView
           Left = 3
           Top = 3
           Width = 853
-          Height = 273
+          Height = 269
           Align = alClient
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          BorderStyle = bsNone
           Columns = 4
           ItemHeight = 13
           Items.Strings = (
@@ -160,7 +161,7 @@ object frmDBGridView: TfrmDBGridView
         Left = 0
         Top = 0
         Width = 859
-        Height = 279
+        Height = 275
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
@@ -169,8 +170,11 @@ object frmDBGridView: TfrmDBGridView
           Left = 3
           Top = 3
           Width = 853
-          Height = 273
+          Height = 269
           Align = alClient
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          BorderStyle = bsNone
           Columns = 4
           ItemHeight = 13
           Items.Strings = (

@@ -25,12 +25,14 @@ package DDuce.Modules;
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
+{$LIBSUFFIX AUTO}
+{$RUNONLY}
 {$IMPLICITBUILD ON}
 
 requires
-  BCEditor.Delphi.Runtime,
   DDuce.Core,
-  DDuce.Components;
+  DDuce.Components,
+  TextEditor.Delphi.Sydney.Runtime;
 
 contains
   DDuce.ObjectInspector in '..\Source\Modules\ObjectInspector\DDuce.ObjectInspector.pas' {frmComponentInspector},
@@ -84,5 +86,3 @@ contains
   DDuce.EditList in '..\Source\Modules\DDuce.EditList.pas' {EditList};
 
 end.
-
-

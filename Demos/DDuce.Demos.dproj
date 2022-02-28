@@ -6,7 +6,7 @@
         <MainSource>DDuce.Demos.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -58,10 +58,10 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <Custom_Styles>Carbon|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Carbon.vsf;Glossy|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glossy.vsf;Glow|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glow.vsf;Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Light.vsf;Windows10|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows10.vsf</Custom_Styles>
+        <Custom_Styles>Glow|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glow.vsf;Windows10|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows10.vsf;Carbon|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Carbon.vsf;Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Light.vsf;Glossy|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Glossy.vsf</Custom_Styles>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <VerInfo_Locale>2067</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=Tim Sinaeve;FileVersion=1.2.1.1;ProductVersion=1.1</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Tim Sinaeve;FileVersion=1.2.1.1;ProductVersion=1.2</VerInfo_Keys>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
         <SanitizedProjectName>DDuce_Demos</SanitizedProjectName>
         <DCC_DcuOutput>.\Lib\$(Platform)\$(Config)</DCC_DcuOutput>
@@ -161,8 +161,8 @@
         <DCCReference Include="Demo.DDuce.Reflect.pas">
             <Form>frmReflect</Form>
         </DCCReference>
-        <DCCReference Include="Demo.DDuce.XMLTree.pas">
-            <Form>frmXMLTree</Form>
+        <DCCReference Include="Demo.DDuce.IniTree.pas">
+            <Form>frmIniTree</Form>
         </DCCReference>
         <DCCReference Include="Demo.Factories.pas"/>
         <DCCReference Include="Demo.MainForm.pas">
@@ -199,6 +199,10 @@
         <DCCReference Include="Demo.DDuce.Dialogs.pas">
             <Form>frmDialogs</Form>
         </DCCReference>
+        <DCCReference Include="Demo.DDuce.JsonTree.pas">
+            <Form>frmJsonTree</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -220,6 +224,7 @@
                     <Source Name="MainSource">DDuce.Demos.dpr</Source>
                 </Source>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\Public\Documents\Embarcadero\Studio\21.0\Bpl\OMultiPanel_Design.bpl">File C:\Users\Public\Documents\Embarcadero\Studio\21.0\Bpl\OMultiPanel_Design.bpl not found</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k270.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp270.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>

@@ -17,10 +17,11 @@ object frmEditList: TfrmEditList
   object splVertical: TSplitter
     Left = 321
     Top = 0
-    Width = 2
+    Width = 6
     Height = 411
-    Color = clScrollBar
+    Color = clBtnFace
     ParentColor = False
+    ResizeStyle = rsLine
   end
   object pnlLeft: TPanel
     Left = 0
@@ -35,9 +36,9 @@ object frmEditList: TfrmEditList
     TabOrder = 0
   end
   object pnlRight: TPanel
-    Left = 323
+    Left = 327
     Top = 0
-    Width = 312
+    Width = 308
     Height = 411
     Align = alClient
     BevelEdges = []
@@ -45,9 +46,9 @@ object frmEditList: TfrmEditList
     TabOrder = 1
     object mmoData: TMemo
       Left = 0
-      Top = 58
-      Width = 312
-      Height = 353
+      Top = 31
+      Width = 308
+      Height = 380
       Align = alBottom
       Anchors = [akLeft, akTop, akRight, akBottom]
       BevelInner = bvNone
@@ -64,8 +65,6 @@ object frmEditList: TfrmEditList
     Width = 97
     Height = 17
     Caption = 'MultiSelect'
-    Checked = True
-    State = cbChecked
     TabOrder = 2
     OnClick = chkMultiSelectClick
   end

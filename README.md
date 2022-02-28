@@ -9,8 +9,10 @@ The sources depend on the following libraries and components:
   * [DSharp](http://bitbucket.org/sglienke/dsharp)
   * [Virtual treeview](http://github.com/Virtual-TreeView/Virtual-TreeView)
   * [NativeXML](http://code.google.com/p/simdesign/)
+  * [TTextEditor](https://github.com/TextEditorPro/TTextEditor)  
 
 In addition some lesser known but excellent open source Delphi components were ported and extended to support the latest versions of Delphi.
+Take a look at the included demo application (´DDuce.Demos´) and unit tests (´DDuce.Tests´) to get a better insight about how everything works.
 
 ## Editor module ##
 
@@ -24,12 +26,11 @@ In addition some lesser known but excellent open source Delphi components were p
 
 ![TValueList](https://github.com/beNative/dduce/blob/master/Wiki/dduce_valuelist_demo.png)
 
-## TPropertyInspector ##
+## TVTNode ##
+ 
+The `TVTNode<T>` class is a generic type designed to be used as the data structure where each treenode in a virtual treeview is pointing to.
 
-This component is based on the work of **Evgeny Balabuyev**. You may obtain a copy of the original code at http://www.torry.net/vcl/packs/lite/extlib.zip.
-It mimics Delphi's object inspector and makes it possible to edit any published property of a component (or other class compiled with RTTI enabled with `{$M+}`) at runtime.
-
-![TPropertyInspector](https://github.com/beNative/dduce/blob/master/Wiki/dduce_propertyinspector.png)
+![TVTNode<T>](https://github.com/beNative/dduce/blob/master/Wiki/dduce_vtnode.png)
 
 ## TGridView ##
 
@@ -46,9 +47,3 @@ A `TGridView` descendant which can be linked to a `TDataSource` and can be used 
 A `TGridView` descendant that displays data in a vertical object inspector-like way. Just like its ancestor this is a virtual grid control so it does not own the data it displays.
 
 ![TInspector](https://github.com/beNative/dduce/blob/master/Wiki/dduce_inspector.png)
-
-## TXMLTree ##
-
-A `TVirtualStringTree` descendant to visualize and edit XML data.
-
-![TXMLTree](https://github.com/beNative/dduce/blob/master/Wiki/dduce_xmltree_demo.png)
