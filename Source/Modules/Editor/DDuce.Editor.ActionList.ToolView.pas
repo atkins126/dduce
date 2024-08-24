@@ -181,9 +181,9 @@ procedure TfrmActionListView.AfterConstruction;
 begin
   inherited AfterConstruction;
   FActionItems  :=
-    TCollections.CreateList<TContainedAction>(False) as IObjectList;
+    TCollections.CreateObjectList<TContainedAction>(False) as IObjectList;
   FCommandItems :=
-    TCollections.CreateList<TTextEditorKeyCommand>(False) as IObjectList;
+    TCollections.CreateObjectList<TTextEditorKeyCommand>(False) as IObjectList;
   CreateActionsView;
   CreateCommandsView;
 

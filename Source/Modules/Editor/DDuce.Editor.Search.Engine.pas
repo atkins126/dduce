@@ -157,7 +157,7 @@ procedure TSearchEngine.AfterConstruction;
 begin
   inherited AfterConstruction;
   FItemGroups := TCollections.CreateObjectList<TSearchResultGroup>;
-  FItemList   := TCollections.CreateList<TSearchResult>(False);
+  FItemList   := TCollections.CreateObjectList<TSearchResult>(False);
   Options     := Settings.Options;
 end;
 {$ENDREGION}

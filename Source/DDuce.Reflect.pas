@@ -178,7 +178,6 @@ class function Reflect.OrdValue<T>(const AArg: T): Integer;
 var
   V: TValue;
 begin
-  Result := 0;
   V := TValue.From<T>(AArg);
   Result := V.AsOrdinal;
 end;
@@ -249,7 +248,6 @@ type
 var
   S    : TIntegerSet;
   I    : Integer;
-  N    : Integer;
   Name : string;
 begin
   Result := '';

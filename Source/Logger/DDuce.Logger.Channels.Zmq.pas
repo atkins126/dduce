@@ -223,7 +223,7 @@ const
 var
   LTextSize : Integer;
   LDataSize : Integer;
-  S: string;
+  S         : string;
 
   function ToHexString(const S: string): string;
   var
@@ -233,7 +233,6 @@ var
     for I := 1 to Length(S) do
       Result := Result + IntToHex(Ord(S[I]), 2);
   end;
-
 
 begin
   if Enabled then

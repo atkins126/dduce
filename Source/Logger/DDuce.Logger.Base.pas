@@ -1187,7 +1187,7 @@ begin
   if not FCounterList.ContainsKey(AName) then
   begin
     LValue := 1;
-    FCounterList.AddOrSetValue(AName, LValue);
+    FCounterList[AName] := LValue;
   end
   else
   begin
@@ -1204,7 +1204,7 @@ begin
   if not FCounterList.ContainsKey(AName) then
   begin
     LValue := -1;
-    FCounterList.AddOrSetValue(AName, LValue);
+    FCounterList[AName] := LValue;
   end
   else
   begin

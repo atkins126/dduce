@@ -1,16 +1,20 @@
 object frmLogger: TfrmLogger
   Left = 0
   Top = 0
+  Margins.Left = 5
+  Margins.Top = 5
+  Margins.Right = 5
+  Margins.Bottom = 5
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Logger'
-  ClientHeight = 701
-  ClientWidth = 644
+  ClientHeight = 1076
+  ClientWidth = 972
   Color = clBtnFace
   DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -17
   Font.Name = 'Segoe UI'
   Font.Style = []
   PopupMode = pmAuto
@@ -18,39 +22,50 @@ object frmLogger: TfrmLogger
   ShowHint = True
   OnClose = FormClose
   OnShow = FormShow
-  TextHeight = 13
+  PixelsPerInch = 144
+  TextHeight = 23
   object grpWatches: TGroupBox
     AlignWithMargins = True
-    Left = 3
-    Top = 579
-    Width = 638
-    Height = 50
+    Left = 5
+    Top = 874
+    Width = 962
+    Height = 75
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     Caption = 'Watches'
     TabOrder = 0
-    ExplicitWidth = 634
+    ExplicitWidth = 965
     DesignSize = (
-      638
-      50)
+      962
+      75)
     object lblPosition: TLabel
-      Left = 12
-      Top = 27
-      Width = 45
-      Height = 13
+      Left = 18
+      Top = 41
+      Width = 64
+      Height = 23
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'Position:'
     end
     object lblPositionValue: TLabel
-      Left = 59
-      Top = 13
-      Width = 53
-      Height = 30
+      Left = 89
+      Top = 20
+      Width = 79
+      Height = 45
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Alignment = taCenter
       AutoSize = False
       Caption = '60'
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -21
+      Font.Height = -32
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentColor = False
@@ -59,10 +74,14 @@ object frmLogger: TfrmLogger
       Layout = tlCenter
     end
     object trbMain: TTrackBar
-      Left = 119
-      Top = 15
-      Width = 359
-      Height = 29
+      Left = 179
+      Top = 23
+      Width = 534
+      Height = 43
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Anchors = [akLeft, akTop, akRight]
       Max = 100
       PageSize = 10
@@ -71,14 +90,19 @@ object frmLogger: TfrmLogger
       PositionToolTip = ptTop
       ShowSelRange = False
       TabOrder = 0
+      ThumbLength = 30
       OnChange = trbMainChange
-      ExplicitWidth = 355
+      ExplicitWidth = 537
     end
     object chkSendRandomValueTimer: TCheckBox
-      Left = 492
-      Top = 19
-      Width = 143
-      Height = 17
+      Left = 715
+      Top = 29
+      Width = 231
+      Height = 25
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'Send random value timer'
       TabOrder = 1
       OnClick = chkSendRandomValueTimerClick
@@ -86,75 +110,111 @@ object frmLogger: TfrmLogger
   end
   object grpMethodTracing: TGroupBox
     AlignWithMargins = True
-    Left = 3
-    Top = 261
-    Width = 638
-    Height = 85
+    Left = 5
+    Top = 395
+    Width = 962
+    Height = 127
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     Caption = 'Method tracing'
     TabOrder = 1
-    ExplicitWidth = 634
+    ExplicitWidth = 965
     object btnEnterMethod1: TButton
-      Left = 12
-      Top = 22
-      Width = 150
-      Height = 26
+      Left = 18
+      Top = 33
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actEnterMethod1
-      ImageMargins.Left = 2
+      ImageMargins.Left = 3
       Images = imlLogger
       TabOrder = 0
     end
     object btnEnterMethod2: TButton
-      Left = 12
-      Top = 51
-      Width = 150
-      Height = 26
+      Left = 18
+      Top = 77
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actEnterMethod2
-      ImageMargins.Left = 2
+      ImageMargins.Left = 3
       Images = imlLogger
       TabOrder = 3
     end
     object btnExitMethod1: TButton
-      Left = 480
-      Top = 20
-      Width = 150
-      Height = 26
+      Left = 720
+      Top = 30
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actLeaveMethod1
-      ImageMargins.Left = 2
+      ImageMargins.Left = 3
       Images = imlLogger
       TabOrder = 2
     end
     object btnExitMethod2: TButton
-      Left = 480
-      Top = 51
-      Width = 150
-      Height = 26
+      Left = 720
+      Top = 77
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actLeaveMethod2
-      ImageMargins.Left = 2
+      ImageMargins.Left = 3
       Images = imlLogger
       TabOrder = 5
     end
     object edtMethod1: TLabeledEdit
-      Left = 247
-      Top = 24
-      Width = 228
-      Height = 21
+      Left = 371
+      Top = 36
+      Width = 342
+      Height = 31
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Alignment = taCenter
-      EditLabel.Width = 81
-      EditLabel.Height = 21
+      EditLabel.Width = 121
+      EditLabel.Height = 31
+      EditLabel.Margins.Left = 5
+      EditLabel.Margins.Top = 5
+      EditLabel.Margins.Right = 5
+      EditLabel.Margins.Bottom = 5
       EditLabel.Caption = 'Method1 name:'
       LabelPosition = lpLeft
       TabOrder = 1
       Text = 'MyObject.Execute'
     end
     object edtMethod2: TLabeledEdit
-      Left = 247
-      Top = 53
-      Width = 228
-      Height = 21
+      Left = 371
+      Top = 80
+      Width = 342
+      Height = 31
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Alignment = taCenter
-      EditLabel.Width = 81
-      EditLabel.Height = 21
+      EditLabel.Width = 121
+      EditLabel.Height = 31
+      EditLabel.Margins.Left = 5
+      EditLabel.Margins.Top = 5
+      EditLabel.Margins.Right = 5
+      EditLabel.Margins.Bottom = 5
       EditLabel.Caption = 'Method2 name:'
       LabelPosition = lpLeft
       TabOrder = 4
@@ -163,55 +223,75 @@ object frmLogger: TfrmLogger
   end
   object grpNotificationMessages: TGroupBox
     AlignWithMargins = True
-    Left = 3
-    Top = 197
-    Width = 638
-    Height = 58
+    Left = 5
+    Top = 298
+    Width = 962
+    Height = 87
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     Caption = 'Notification messages'
     TabOrder = 2
-    ExplicitWidth = 634
+    ExplicitWidth = 965
     object btnSendInfo: TButton
-      Left = 17
-      Top = 21
-      Width = 150
-      Height = 26
+      Left = 26
+      Top = 32
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendInfo
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Tahoma'
       Font.Style = []
-      ImageMargins.Left = 2
+      ImageMargins.Left = 3
       Images = imlLogger
       ParentFont = False
       TabOrder = 0
     end
     object btnSendWarning: TButton
-      Left = 173
-      Top = 21
-      Width = 150
-      Height = 26
+      Left = 260
+      Top = 32
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendWarning
-      ImageMargins.Left = 2
+      ImageMargins.Left = 3
       Images = imlLogger
       TabOrder = 1
     end
     object btnSendError: TButton
-      Left = 330
-      Top = 21
-      Width = 150
-      Height = 26
+      Left = 495
+      Top = 32
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendError
-      ImageMargins.Left = 2
+      ImageMargins.Left = 3
       Images = imlLogger
       TabOrder = 2
     end
     object btnSendClear: TButton
-      Left = 486
-      Top = 21
-      Width = 144
-      Height = 26
+      Left = 729
+      Top = 32
+      Width = 216
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendClear
       Images = imlLogger
       TabOrder = 3
@@ -219,26 +299,33 @@ object frmLogger: TfrmLogger
   end
   object grpCounters: TGroupBox
     AlignWithMargins = True
-    Left = 3
-    Top = 352
-    Width = 638
-    Height = 58
+    Left = 5
+    Top = 532
+    Width = 962
+    Height = 87
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     Caption = 'Counters'
     TabOrder = 3
-    ExplicitWidth = 634
+    ExplicitWidth = 965
     object lblCounterValue: TLabel
-      Left = 85
-      Top = 18
-      Width = 77
-      Height = 30
+      Left = 128
+      Top = 27
+      Width = 115
+      Height = 45
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Alignment = taCenter
       AutoSize = False
       Caption = '0'
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -21
+      Font.Height = -32
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentColor = False
@@ -247,38 +334,54 @@ object frmLogger: TfrmLogger
       Layout = tlCenter
     end
     object btnIncCounter: TButton
-      Left = 168
-      Top = 22
-      Width = 150
-      Height = 26
+      Left = 252
+      Top = 33
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actIncCounter
       Images = imlLogger
       TabOrder = 1
     end
     object btnResetCounter: TButton
-      Left = 480
-      Top = 21
-      Width = 150
-      Height = 26
+      Left = 720
+      Top = 32
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actResetCounter
       Images = imlLogger
       TabOrder = 3
     end
     object btnDecCounter: TButton
-      Left = 324
-      Top = 22
-      Width = 150
-      Height = 26
+      Left = 486
+      Top = 33
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actDecCounter
       Images = imlLogger
       TabOrder = 2
     end
     object chkEnableCountTimer: TCheckBox
-      Left = 12
-      Top = 16
-      Width = 72
-      Height = 39
+      Left = 18
+      Top = 24
+      Width = 108
+      Height = 59
       Hint = 'Increases the counter automatically each second.'
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'Enable count timer'
       TabOrder = 0
       WordWrap = True
@@ -287,391 +390,539 @@ object frmLogger: TfrmLogger
   end
   object grpLoggerSettings: TGroupBox
     AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 638
-    Height = 134
+    Left = 5
+    Top = 5
+    Width = 962
+    Height = 201
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     Caption = 'Logger channels'
     TabOrder = 4
-    ExplicitWidth = 634
+    ExplicitWidth = 965
     DesignSize = (
-      638
-      134)
+      962
+      201)
     object lblLogViewer: TLabel
-      Left = 220
+      Left = 330
       Top = 0
-      Width = 232
-      Height = 13
+      Width = 362
+      Height = 21
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'Run this together with the LogViewer application'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlue
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Tahoma'
       Font.Style = [fsUnderline]
       ParentFont = False
       Transparent = False
     end
     object lblZeroMQPort: TLabel
-      Left = 598
-      Top = 50
-      Width = 32
-      Height = 13
+      Left = 897
+      Top = 75
+      Width = 48
+      Height = 20
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       AutoSize = False
       Caption = '0000'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
       Layout = tlCenter
     end
     object lblZeroMQPortCaption: TLabel
-      Left = 570
-      Top = 50
-      Width = 24
-      Height = 13
+      Left = 855
+      Top = 75
+      Width = 35
+      Height = 23
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'Port:'
     end
     object lblIPCaption: TLabel
-      Left = 469
-      Top = 50
-      Width = 12
-      Height = 13
+      Left = 704
+      Top = 75
+      Width = 19
+      Height = 23
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'IP:'
     end
     object lblIPAddress: TLabel
-      Left = 486
-      Top = 50
-      Width = 79
-      Height = 13
+      Left = 729
+      Top = 75
+      Width = 119
+      Height = 20
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       AutoSize = False
       Caption = 'localhost'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object lblProcessId: TLabel
-      Left = 85
-      Top = 105
-      Width = 81
-      Height = 13
+      Left = 128
+      Top = 158
+      Width = 125
+      Height = 23
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'Process ID (PID):'
     end
     object lblPIDValue: TLabel
-      Left = 172
-      Top = 105
-      Width = 79
-      Height = 13
+      Left = 258
+      Top = 158
+      Width = 119
+      Height = 19
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       AutoSize = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object chkLogFileChannel: TCheckBox
-      Left = 17
-      Top = 22
-      Width = 62
-      Height = 17
+      Left = 26
+      Top = 33
+      Width = 93
+      Height = 26
       Hint = 'Enables or disables logfile channel.'
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'Logfile'
       TabOrder = 0
       OnClick = chkLogFileChannelClick
     end
     object chkWinIPCChannel: TCheckBox
-      Left = 17
-      Top = 103
-      Width = 61
-      Height = 17
+      Left = 26
+      Top = 155
+      Width = 91
+      Height = 25
       Hint = 'Enables or disables WinIPC channel.'
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'WinIPC'
       TabOrder = 5
       OnClick = chkWinIPCChannelClick
     end
     object chkZeroMQChannel: TCheckBox
-      Left = 17
-      Top = 49
-      Width = 61
-      Height = 17
+      Left = 26
+      Top = 74
+      Width = 91
+      Height = 25
       Hint = 'Enables or disables ZeroMQ channel.'
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'ZeroMQ'
       TabOrder = 2
       OnClick = chkZeroMQChannelClick
     end
     object edtLogFile: TButtonedEdit
-      Left = 85
-      Top = 20
-      Width = 541
-      Height = 21
+      Left = 128
+      Top = 30
+      Width = 808
+      Height = 31
       Hint = 'Database (server or path).'
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Anchors = [akLeft, akTop, akRight]
       Images = imlLogger
       RightButton.ImageIndex = 23
       RightButton.Visible = True
       TabOrder = 1
-      ExplicitWidth = 537
+      ExplicitWidth = 811
     end
     object edtEndPoint: TLabeledEdit
-      Left = 235
-      Top = 47
-      Width = 138
-      Height = 21
+      Left = 353
+      Top = 71
+      Width = 203
+      Height = 31
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
-      EditLabel.Width = 51
-      EditLabel.Height = 21
+      EditLabel.Width = 73
+      EditLabel.Height = 31
+      EditLabel.Margins.Left = 5
+      EditLabel.Margins.Top = 5
+      EditLabel.Margins.Right = 5
+      EditLabel.Margins.Bottom = 5
       EditLabel.Caption = 'Endpoint:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       LabelPosition = lpLeft
       ParentFont = False
       TabOrder = 3
       Text = 'tcp://*:*'
-      ExplicitWidth = 134
+      ExplicitWidth = 206
     end
     object btnZMQBind: TButton
-      Left = 85
-      Top = 45
-      Width = 92
-      Height = 25
+      Left = 128
+      Top = 68
+      Width = 138
+      Height = 37
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actZMQBind
       DropDownMenu = ppmBind
       Style = bsSplitButton
       TabOrder = 4
     end
     object btnZMQCloseSocket: TButton
-      Left = 383
-      Top = 45
-      Width = 82
-      Height = 26
+      Left = 575
+      Top = 68
+      Width = 123
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actZMQCloseSocket
       TabOrder = 6
     end
     object chkMQTTChannel: TCheckBox
-      Left = 17
-      Top = 76
-      Width = 53
-      Height = 17
+      Left = 26
+      Top = 114
+      Width = 79
+      Height = 26
       Hint = 'Enables or disables MQTT channel.'
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'MQTT'
       TabOrder = 7
     end
     object edtMQTTBroker: TLabeledEdit
-      Left = 235
-      Top = 74
-      Width = 138
-      Height = 21
+      Left = 353
+      Top = 111
+      Width = 203
+      Height = 31
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
-      EditLabel.Width = 36
-      EditLabel.Height = 21
+      EditLabel.Width = 53
+      EditLabel.Height = 31
+      EditLabel.Margins.Left = 5
+      EditLabel.Margins.Top = 5
+      EditLabel.Margins.Right = 5
+      EditLabel.Margins.Bottom = 5
       EditLabel.Caption = 'Broker:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       LabelPosition = lpLeft
       ParentFont = False
       TabOrder = 8
       Text = 'localhost'
-      ExplicitWidth = 134
+      ExplicitWidth = 206
     end
     object btnMQTTConnect: TButton
-      Left = 85
-      Top = 72
-      Width = 92
-      Height = 25
+      Left = 128
+      Top = 108
+      Width = 138
+      Height = 38
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actMQTTConnect
       TabOrder = 9
     end
     object edtMQTTPort: TLabeledEdit
-      Left = 411
-      Top = 74
-      Width = 50
-      Height = 21
+      Left = 617
+      Top = 111
+      Width = 71
+      Height = 31
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Alignment = taCenter
       Anchors = [akLeft, akTop, akRight]
-      EditLabel.Width = 24
-      EditLabel.Height = 21
+      EditLabel.Width = 35
+      EditLabel.Height = 31
+      EditLabel.Margins.Left = 5
+      EditLabel.Margins.Top = 5
+      EditLabel.Margins.Right = 5
+      EditLabel.Margins.Bottom = 5
       EditLabel.Caption = 'Port:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       LabelPosition = lpLeft
       ParentFont = False
       TabOrder = 10
       Text = '1883'
-      ExplicitWidth = 46
+      ExplicitWidth = 74
     end
   end
   object grpCheckpoints: TGroupBox
     AlignWithMargins = True
-    Left = 3
-    Top = 635
-    Width = 638
-    Height = 59
+    Left = 5
+    Top = 959
+    Width = 962
+    Height = 110
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     Caption = 'Checkpoints'
     TabOrder = 5
-    ExplicitWidth = 634
+    ExplicitWidth = 982
     object lblCheckpointDescription: TLabel
-      Left = 12
-      Top = 19
-      Width = 290
-      Height = 39
+      Left = 18
+      Top = 29
+      Width = 428
+      Height = 69
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 
         'Checkpoints are used to mark points in code of which a pass coun' +
         't can be monitored by the LogViewer application.'
       WordWrap = True
     end
     object btnResetCheckpoint: TButton
-      Left = 480
-      Top = 19
-      Width = 150
-      Height = 26
+      Left = 720
+      Top = 29
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actResetCheckpoint
       Images = imlLogger
       TabOrder = 1
     end
     object btnAddCheckpoint: TButton
-      Left = 324
-      Top = 19
-      Width = 150
-      Height = 26
+      Left = 486
+      Top = 29
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actAddCheckpoint
-      ImageMargins.Left = 3
+      ImageMargins.Left = 5
       Images = imlLogger
       TabOrder = 0
     end
   end
   object grpValues: TGroupBox
     AlignWithMargins = True
-    Left = 3
-    Top = 416
-    Width = 638
-    Height = 118
+    Left = 5
+    Top = 629
+    Width = 962
+    Height = 177
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     Caption = 'Log values'
     TabOrder = 6
-    ExplicitWidth = 634
+    ExplicitWidth = 965
     object btnSendObject: TButton
-      Left = 324
-      Top = 23
-      Width = 150
-      Height = 26
+      Left = 486
+      Top = 35
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendObject
       Caption = 'Send TObject'
       Images = imlLogger
       TabOrder = 2
     end
     object btnSendRecord: TButton
-      Left = 168
-      Top = 23
-      Width = 150
-      Height = 26
+      Left = 252
+      Top = 35
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendRecord
       Images = imlLogger
       TabOrder = 1
     end
     object btnSendComponent: TButton
-      Left = 168
-      Top = 54
-      Width = 150
-      Height = 26
+      Left = 252
+      Top = 81
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendComponent
       Images = imlLogger
       TabOrder = 5
     end
     object btnSendStrings: TButton
-      Left = 324
-      Top = 54
-      Width = 150
-      Height = 26
+      Left = 486
+      Top = 81
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendStrings
       Images = imlLogger
       TabOrder = 6
     end
     object btnSendDataSet: TButton
-      Left = 480
-      Top = 85
-      Width = 150
-      Height = 26
+      Left = 720
+      Top = 128
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendDataSet
       Images = imlLogger
       TabOrder = 11
     end
     object btnSendBitmap: TButton
-      Left = 480
-      Top = 54
-      Width = 150
-      Height = 26
+      Left = 720
+      Top = 81
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendBitmap
       Images = imlLogger
       TabOrder = 7
     end
     object btnSendRect: TButton
-      Left = 168
-      Top = 85
-      Width = 150
-      Height = 26
+      Left = 252
+      Top = 128
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendRect
       Images = imlLogger
       TabOrder = 9
     end
     object btnSendPoint: TButton
-      Left = 12
-      Top = 85
-      Width = 150
-      Height = 26
+      Left = 18
+      Top = 128
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendPoint
       Images = imlLogger
       TabOrder = 8
     end
     object btnSendInterface: TButton
-      Left = 480
-      Top = 23
-      Width = 150
-      Height = 26
+      Left = 720
+      Top = 35
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendInterface
       Images = imlLogger
       TabOrder = 3
     end
     object btnSendText: TButton
-      Left = 12
-      Top = 23
-      Width = 150
-      Height = 26
+      Left = 18
+      Top = 35
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendText
       Images = imlLogger
       TabOrder = 0
     end
     object btnSendPersistent: TButton
-      Left = 12
-      Top = 54
-      Width = 150
-      Height = 26
+      Left = 18
+      Top = 81
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendPersistent
       Images = imlLogger
       TabOrder = 4
     end
     object btnSendSQL: TButton
-      Left = 324
-      Top = 85
-      Width = 150
-      Height = 26
+      Left = 486
+      Top = 128
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendSQL
       Images = imlLogger
       TabOrder = 10
@@ -679,35 +930,51 @@ object frmLogger: TfrmLogger
   end
   object grpCustom: TGroupBox
     AlignWithMargins = True
-    Left = 3
-    Top = 143
-    Width = 638
-    Height = 48
+    Left = 5
+    Top = 216
+    Width = 962
+    Height = 72
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     Caption = 'Custom'
     TabOrder = 7
-    ExplicitWidth = 634
+    ExplicitWidth = 965
     object btnSendObject1: TButton
-      Left = 325
-      Top = 16
-      Width = 150
-      Height = 26
+      Left = 488
+      Top = 24
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendTestSequence
       Images = imlLogger
       TabOrder = 2
     end
     object edtMessageCount: TLabeledEdit
-      Left = 89
-      Top = 18
-      Width = 73
-      Height = 21
+      Left = 134
+      Top = 27
+      Width = 109
+      Height = 31
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Alignment = taRightJustify
-      EditLabel.Width = 81
-      EditLabel.Height = 21
+      EditLabel.Width = 119
+      EditLabel.Height = 31
+      EditLabel.Margins.Left = 5
+      EditLabel.Margins.Top = 5
+      EditLabel.Margins.Right = 5
+      EditLabel.Margins.Bottom = 5
       EditLabel.Caption = 'Message count:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -11
+      Font.Height = -17
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       LabelPosition = lpLeft
@@ -717,52 +984,70 @@ object frmLogger: TfrmLogger
       Text = '0'
     end
     object btnSendMessages: TButton
-      Left = 168
-      Top = 16
-      Width = 150
-      Height = 26
+      Left = 252
+      Top = 24
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendMessages
       TabOrder = 1
     end
     object btnSendODS: TButton
-      Left = 481
-      Top = 16
-      Width = 150
-      Height = 26
+      Left = 722
+      Top = 24
+      Width = 225
+      Height = 39
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Action = actSendODS
       TabOrder = 3
     end
   end
   object grpActions: TGroupBox
     Left = 0
-    Top = 537
-    Width = 644
-    Height = 39
+    Top = 811
+    Width = 972
+    Height = 58
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     TabOrder = 8
-    ExplicitWidth = 640
+    ExplicitWidth = 975
     DesignSize = (
-      644
-      39)
+      972
+      58)
     object lblLogLevel: TLabel
-      Left = 171
-      Top = 13
-      Width = 48
-      Height = 13
+      Left = 257
+      Top = 20
+      Width = 71
+      Height = 23
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Caption = 'Log level:'
     end
     object lblLogLevelValue: TLabel
-      Left = 223
-      Top = 4
-      Width = 42
-      Height = 30
+      Left = 335
+      Top = 6
+      Width = 63
+      Height = 45
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
       Alignment = taCenter
       AutoSize = False
       Caption = '0'
       Color = clWhite
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -21
+      Font.Height = -32
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentColor = False
@@ -770,27 +1055,36 @@ object frmLogger: TfrmLogger
       Transparent = False
     end
     object chkActions: TCheckBox
-      Left = 14
-      Top = 12
-      Width = 157
-      Height = 17
+      Left = 21
+      Top = 18
+      Width = 236
+      Height = 26
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'Log execution of actions.'
       Checked = True
       State = cbChecked
       TabOrder = 0
     end
     object trbLogLevel: TTrackBar
-      Left = 271
-      Top = 7
-      Width = 358
-      Height = 25
+      Left = 407
+      Top = 11
+      Width = 534
+      Height = 37
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Anchors = [akLeft, akTop, akRight]
       Max = 31
       Frequency = 10
       ShowSelRange = False
       TabOrder = 1
+      ThumbLength = 30
       OnChange = trbLogLevelChange
-      ExplicitWidth = 354
+      ExplicitWidth = 537
     end
   end
   object aclMain: TActionList

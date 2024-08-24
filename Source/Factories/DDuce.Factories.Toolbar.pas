@@ -65,7 +65,7 @@ begin
     begin
       if I < AToolBar.ButtonCount then
       begin
-       // D := (TB.Visible and (TB.Style in [tbsSeparator, tbsDivider])) or (not TB.Visible);
+//        D := (TB.Visible and (TB.Style in [tbsSeparator, tbsDivider])) or (not TB.Visible);
         TB := AToolBar.Buttons[I];
       end
       else
