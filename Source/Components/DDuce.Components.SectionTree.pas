@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2024 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ uses
   System.SysUtils, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ImgList,
 
-  VirtualTrees, VirtualTrees.Types, VirtualTrees.Header;
+  VirtualTrees, VirtualTrees.BaseTree, VirtualTrees.Types, VirtualTrees.Header;
 
 type
   TSectionTree = class(TCustomVirtualStringTree)
@@ -576,7 +576,7 @@ end;
 procedure TSectionTree.DoMeasureItem(TargetCanvas: TCanvas; Node: PVirtualNode;
   var NodeHeight: Integer);
 var
-  N : Cardinal;
+  N : Integer;
 begin
   N := ComputeNodeHeight(TargetCanvas, Node, 0);
   if N > (DefaultNodeHeight + 5) then
@@ -699,7 +699,7 @@ begin
   begin
     if AColumn = Header.MainColumn then
     begin
-      LIndent := GetNodeLevel(ANode) * Indent;
+      LIndent := Integer(GetNodeLevel(ANode)) * Indent;
       Inc(ACellRect.Left, LIndent);
       LIndent := -Integer(Indent);
     end

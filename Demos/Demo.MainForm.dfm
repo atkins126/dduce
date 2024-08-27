@@ -1,29 +1,36 @@
 object frmMainMenu: TfrmMainMenu
   Left = 515
   Top = 244
+  Margins.Left = 5
+  Margins.Top = 5
+  Margins.Right = 5
+  Margins.Bottom = 5
   ActiveControl = pnlVST
   Caption = 'DDuce demos'
-  ClientHeight = 355
-  ClientWidth = 369
+  ClientHeight = 533
+  ClientWidth = 563
   Color = clWhite
   DefaultMonitor = dmMainForm
   DoubleBuffered = True
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -13
+  Font.Height = -20
   Font.Name = 'Segoe UI'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   ShowHint = True
   OnShow = FormShow
-  PixelsPerInch = 96
-  TextHeight = 17
+  PixelsPerInch = 144
+  TextHeight = 28
   object pnlVST: TPanel
     Left = 0
-    Top = 18
-    Width = 369
-    Height = 286
+    Top = 27
+    Width = 563
+    Height = 428
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
@@ -31,16 +38,24 @@ object frmMainMenu: TfrmMainMenu
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 369
-    Height = 18
+    Width = 563
+    Height = 27
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 2
     object edtFilter: TEdit
       Left = 0
       Top = 0
-      Width = 369
-      Height = 18
+      Width = 563
+      Height = 27
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Align = alClient
       Alignment = taCenter
       BevelInner = bvNone
@@ -48,7 +63,7 @@ object frmMainMenu: TfrmMainMenu
       BorderStyle = bsNone
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -20
       Font.Name = 'Segoe UI'
       Font.Style = [fsItalic]
       ParentFont = False
@@ -63,25 +78,33 @@ object frmMainMenu: TfrmMainMenu
   end
   object sbrMain: TStatusBar
     Left = 0
-    Top = 336
-    Width = 369
-    Height = 19
+    Top = 504
+    Width = 563
+    Height = 29
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Panels = <>
     SimplePanel = True
   end
   object btnExecute: TButton
     AlignWithMargins = True
-    Left = 3
-    Top = 307
-    Width = 363
-    Height = 26
+    Left = 5
+    Top = 460
+    Width = 553
+    Height = 39
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Action = actExecute
     Align = alBottom
     Default = True
-    ImageMargins.Left = 3
-    ImageMargins.Top = 3
-    ImageMargins.Right = 3
-    ImageMargins.Bottom = 3
+    ImageMargins.Left = 5
+    ImageMargins.Top = 5
+    ImageMargins.Right = 5
+    ImageMargins.Bottom = 5
     Images = imlMain
     TabOrder = 0
   end

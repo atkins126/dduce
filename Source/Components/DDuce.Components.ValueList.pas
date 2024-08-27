@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2024 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ uses
   System.Classes, System.Types,
   Vcl.Graphics,
 
-  VirtualTrees,
+  VirtualTrees, VirtualTrees.Types, VirtualTrees.BaseTree,
 
   Spring, Spring.Collections,
 
@@ -358,7 +358,7 @@ uses
   System.SysUtils,
   Vcl.Forms, Vcl.Controls,
 
-  VirtualTrees.Types, VirtualTrees.Header;
+  VirtualTrees.Header;
 
 {$REGION 'construction and destruction'}
 destructor TValueList.Destroy;

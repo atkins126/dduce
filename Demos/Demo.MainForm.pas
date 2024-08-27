@@ -1,5 +1,5 @@
 {
-  Copyright (C) 2013-2022 Tim Sinaeve tim.sinaeve@gmail.com
+  Copyright (C) 2013-2024 Tim Sinaeve tim.sinaeve@gmail.com
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ uses
   Vcl.ActnList, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.Controls, Vcl.ExtCtrls,
   Vcl.Buttons, Vcl.Forms, Vcl.ImgList, Vcl.Taskbar,
 
-  VirtualTrees,
+  VirtualTrees, VirtualTrees.BaseTree,
 
   DSharp.Windows.ColumnDefinitions, DSharp.Windows.TreeViewPresenter,
 
